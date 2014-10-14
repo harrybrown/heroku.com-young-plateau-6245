@@ -1,0 +1,29 @@
+development:
+  adapter: mysql2
+  database: career_development
+  username: root
+  password: root
+  host: 127.0.0.1
+  encoding: utf8
+  port: 8889
+  
+      
+test:
+  adapter: mysql2
+  database: career_test
+  username: root
+  password: root
+  host: 127.0.0.1
+  encoding: utf8
+  port: 8889
+
+
+cucumber:
+  adapter: mysql2
+  database: career_test
+  username: root
+  password: root
+  host: 127.0.0.1
+  encoding: utf8
+  port: 8889
+  
