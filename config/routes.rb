@@ -1,4 +1,8 @@
 Career::Application.routes.draw do
+  resources :service_skills
+
+  resources :services
+
   resources :resumes
 
   resources :users

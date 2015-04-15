@@ -14,7 +14,7 @@
   /* force vertical scrollbar */
   body {
     overflow-y: scroll;
-    background-color: #13171f;}
+    background-color: rgba(19, 23, 31, 0.9);}
   }
   html { background-color: #0d0f13;}
   /* Layout Module Configuration */

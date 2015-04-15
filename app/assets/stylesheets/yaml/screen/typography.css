@@ -360,7 +360,7 @@
   }
 
   .info {
-    background: #101420;
+    background: rgba(19, 23, 31, 0.4);
   }
 
   .success {
