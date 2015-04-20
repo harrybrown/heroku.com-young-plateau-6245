@@ -1,14 +1,67 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Career</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Career</title>
+    <%= stylesheet_link_tag  "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <video id="bgVideo" controls preload="false" autoplay loop muted>
+      <source src="assets/the_sun.mp4" type="video/mp4" > 
+    </video>
+    <ul class="ym-skiplinks">
+      <li><a class="ym-skip" href="#nav">Skip to navigation (Press Enter)</a></li>
+      <li><a class="ym-skip" href="#main">Skip to main content (Press Enter)</a></li>
+    </ul>
+    <nav id="nav">
+      <div class="ym-wrapper" style="max-width: 76em;">
+        <div class="ym-hlist">
+          <ul>
+            <li class="active"><strong>Home</strong></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Resume</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <h1 style="line-height: 30px; margin: 0; color: #fff;">
+            <span style="font-size: 30px;">
+              <img src="assets/rex-eye.png" style="max-height: 30px;"/>
+              T-Rex&nbsp;Designs
+            </span>
+            <span style="font-size: 12px; font-weight: normal; font-family: 'Ubuntu', Georgia, 'Times New Roman', Times, serif;">&nbsp;- Ruby on Rails Developer (Chicago)
+            </span>
+          </h1>
+        </div>
+      </div>
+    </nav>
 
-<%= yield %>
+    <%= yield %>
 
-</body>
+    <footer>
+      <div class="ym-wrapper" style="max-width: 76em;">
+        <article class="ym-g50 ym-gr" style="display: inline-block; float: none;">
+          <div class="ym-gbox">
+            <!-- content -->
+            <h4>Widget</h4>
+            <ul>
+              <li>About</li>
+              <li>Service</li>
+              <li>Resume</li>
+              <li>Skills</li>
+              <li>Contact</li>
+            </ul>
+          </div>
+        </article>
+        <article class="ym-g50 ym-gr" style="display: inline-block; float: none;">
+          <div class="ym-gbox">
+            <!-- content -->
+            <p>This responsive web site has been designed, developed, and maintained by Leroy Brown. It’s built with Ruby on Rails, optimised for a fast page load, hosted on AWS and served via CloudFront. Current Average load is 0.4s.</p>
+          </div>
+        </article>
+      </div>
+    </footer>
+    <!-- full skip link functionality in webkit browsers -->
+    <script src="../yaml/core/js/yaml-focusfix.js"></script>
+  </body>
 </html>
