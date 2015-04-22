@@ -23,24 +23,30 @@
     padding: 10px
   /* Basic Element Styling
   header
-    background: #001100
-    color: #ccc
+    background: $darker_shade
+    color: $lightest_shade
     padding: 1.5em
-    h1
+    h1, h3, h5
       background: transparent
-      color: #fff
+      color: $lighter_shade
+    h2, h4, h6
+      background: transparent
+      color: $alternate_lighter     
   nav
-    background: #004400
-    background: url("/assets/grain.png") 50% 50%, -moz-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 80%), #004400
-    background: url("/images/global/grain.png") 50% 50%, -webkit-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 80%), #004400
+    background: $primary_color
+    background: url("/assets/grain.png") 50% 50%, -moz-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 80%), $primary_color
+    background: url("/images/global/grain.png") 50% 50%, -webkit-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 80%), $primary_color
   main
     padding: 1.5em 0 0 0
   footer
+    min-height: 500px
+    width: 100%
     margin: 0
-    background: #0d0f13
-    color: #666
+    background: $darkest_shade
+    color: $lightest_shade
     padding: 1.5em
-    p
+    p, a, h1, h2, h3, h4, h5, h6
+      color: $alternate_lighter
       margin: 0
   /* Column-Set Configuration: 1-3 (sidebar right)
   .ym-column

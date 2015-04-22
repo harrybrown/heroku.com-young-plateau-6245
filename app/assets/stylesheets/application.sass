@@ -1,59 +1,16 @@
 @charset "utf-8"
 /* Non Premium Variables */
-$color: #ab1f23
+$primary_color: #000088
 
-$background-primary: $color
-$background-hover: lighten($color, 4%)
-$background-active: darken($color, 4%)
+$dark_shade: darken($primary_color, 10%)
+$darker_shade: darken($primary_color, 20%)
+$darkest_shade: darken($primary_color, 30%)
+$alternate_darker: desaturate(darken(adjust-hue($primary_color, -20%), 40%), 60%)  
 
-$border-primary: opacify($color, .4)
-$border-hover: opacify($color, .2)
-$border-active: $color
-
-$lighter-variation: desaturate(lighten(adjust-hue($color, 14%), 24%), 30%)  
-@charset "utf-8"
-/* Non Premium Variables */
-$color: #ab1f23
-
-$background-primary: $color
-$background-hover: lighten($color, 4%)
-$background-active: darken($color, 4%)
-
-$border-primary: opacify($color, .4)
-$border-hover: opacify($color, .2)
-$border-active: $color
-
-$lighter-variation: desaturate(lighten(adjust-hue($color, 14%), 24%), 30%)  
-
-$search-input-icon:  url("/assets/search-red.png") no-repeat
-
-$firm-avatar: url("/assets/global/firm_no_avatar.png")
-
-$search-icon: url('/images/global/red_search_icon.png') no-repeat
-
-$official-icon: url("/images/collections/official-bg1.png")
-
-$clear-search-button: url("/assets/search-delete.png")
-
-$text-primary: $color
-
-$product-button-hover: url("/assets/search-stub-red.png")
-
-$action-button-background: desaturate(lighten($color, 80%), 100%) 
-
-$action-button-text-color: desaturate(lighten($color, 10%), 100%)    
-
-$action-button-text-hover:  desaturate(darken($color, 80%), 100%)
-
-$action-button-border:  desaturate(lighten($color, 10%), 100%)
-
-$project-button-hover-position:  -20px -60px  
-
-$project-button-icon-position:  0 -60px
-
-$project-button-text: desaturate(lighten($color, 10%), 100%)
-
-$project-button-text-hover:  desaturate(darken($color, 26%), 100%)  
+$light_shade: lighten($primary_color, 20%)
+$lighter_shade:  lighten($primary_color, 40%)
+$lightest_shade: lighten($primary_color, 60%)
+$alternate_lighter: desaturate(lighten(adjust-hue($primary_color, -20%), 40%), 60%)  
 
 
 /* YUI Reset */
