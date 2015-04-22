@@ -1,25 +1,37 @@
-<h1>Listing service_skills</h1>
+<div class="ym-wrapper">
+  <div class="ym-wbox">   
+    <main>
+      <div class="ym-column linearize-level-1">
+            <section class="box info">
+              <h1>Skills</h1>
+              <table>
+                <tbody>
+                  <% @services.each do |service| %>
+                    <tr>
+                      <td>
+                        <h4><%= service.name %></h4>
+                        <table>
+                          <% service.service_skills.each do |skill| %>
+                            <tr>
+                              <td>
+                                <h6><%= skill.name %></h6>
+                              </td>
+                              <td>
+                                <%= skill.description %>
+                              </td>
+                            </tr>
+                          <% end %>
+                        </table>
+                      <td><%#= link_to 'Edit', edit_service_skill_path(service_skill) %></td>
+                      <td><%#= link_to 'Destroy', service_skill, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                    </tr>
+                  <% end %>
+                </tbody>
+              </table>
+              <br>
+            </section>
+      </div>
+    </main>   
+  </div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @service_skills.each do |service_skill| %>
-      <tr>
-        <td><%= link_to 'Show', service_skill %></td>
-        <td><%= link_to 'Edit', edit_service_skill_path(service_skill) %></td>
-        <td><%= link_to 'Destroy', service_skill, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Service skill', new_service_skill_path %>

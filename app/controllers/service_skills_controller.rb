@@ -4,6 +4,7 @@ class ServiceSkillsController < ApplicationController
   # GET /service_skills
   # GET /service_skills.json
   def index
+    @services = Service.all
     @service_skills = ServiceSkill.all
   end
 
