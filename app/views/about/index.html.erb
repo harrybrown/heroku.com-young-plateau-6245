@@ -1,5 +1,3 @@
-
-
 <div class="ym-wrapper">
   <div class="ym-wbox">   
     <main>
@@ -8,9 +6,9 @@
           <div class="ym-cbox">
             <section class="box info">
               <h2>About H. Leroy Brown</h2>
+              <p>I'm a freelance web developer based in Chicago, working on projects from all over the US. Working for Merchandise Mart (an historic international business), exposed me to a larger .</p>
               <p>I design compelling apps, intuitive interfaces, and engaging brands. All helping to improve response, drive sales, and boost profitability.</p>
               <p>Most of my work is done in <a href="http://www.ruby-lang.org/" target="_blank">Ruby</a>, <a href="http://rubyonrails.org/" target="_blank">Rails</a>, <a href="http://sass-lang.com/" target="_blank">Sass</a>, and <a href="http://coffeescript.org/" target="_blank">Wordpress</a>. I&rsquo;m a huge fan of Ruby on Rails; it&rsquo;s unbeatable when it comes to rapid web application development. Much of the code in Ruby reads like regular English so it&rsquo;s intuitive and brings a certain ease of use – pretty ironic since Ruby originated in Japan. Ruby on Rails has a great flow, delivers fast, clean results, and lets me write beautiful code easily. It works exceptionally well with an <a href="http://agilemanifesto.org/" target="_blank">Agile approach to software development</a>.</p>
-              <p>'m a freelance web developer based in Chicago, working on projects from all over the US. I've coded for clients in New York and here in Chicago.</p>
               <p>Over the past decade and a half, I&rsquo;ve built up some serious skills. As a freelance web designer, I have the privilege of working remotely for clients all over the world. I gained my staring client base here in Chicago, IL and provide professional services from small to large businesses of all kinds. Bottom line is, my work transcends expectations and delivers pure awesomeness on every level. Every time.</p>
               <a class="ym-button ym-primary" href="#">Read More</a>
             </section>
@@ -18,15 +16,15 @@
               <article class="ym-g50 ym-gl">
                 <div class="ym-gbox">
                   <!-- content -->
-                  <h3>Heading</h3>
-                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+                  <h3>I like painting.</h3>
+                  <p>I love the smell of oil paints... it's kinda nostalgic. I'm no good at painting... but it's fun and relaxing. I'm definitely no Picasso or Monet... I make stupid pictures; If I can make someone laugh with a painting, then my purpose is served. </p>
                 </div>
               </article>
               <article class="ym-g50 ym-gr">
                 <div class="ym-gbox">
                   <!-- content -->
-                  <h3>Heading</h3>
-                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+                  <h3>Trains are fun.</h3>
+                  <p>Obviously, I like dinosaurs... which you can probably tell by the name of my company, T-Rex Designs. My New Years' Resolution for 2015 is to create a miniature Jurassic Park with a train running around it. I'm off to a good start so far. At least I made a resolution this year that won't be forgotten.</p>
                 </div>
               </article>
             </section>
@@ -34,15 +32,15 @@
               <article class="ym-g50 ym-gl">
                 <div class="ym-gbox">
                   <!-- content -->
-                  <h3>Heading</h3>
-                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+                  <h3>My Buddy and me.</h3>
+                  <p>I have a Labrador/Pit Bull mix named Buddy. Well, I'm not completely sure of his breed because I adopted him from the animal shelter. But based on his appearance and temperament, I'm pretty sure of his lineage. His name is Buddy Bongo Brown. Our first few months together were difficult; he was a lot more work than I expected. A LOT MORE responsibility than I thought.  </p>
                 </div>
               </article>
               <article class="ym-g50 ym-gr">
                 <div class="ym-gbox">
                   <!-- content -->
-                  <h3>Heading</h3>
-                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+                  <h3>Family.</h3>
+                  <p>I was so lucky to be born into an old-fashioned, Christian family like mine. I'm not very religious but I think my upbringing instilled a strong sense of morality that guides me every day of my life. My parents have been married for 62 years and provide a solid foundation for our family and a great example of commitment and stability. </p>
                 </div>
               </article>
             </section>
@@ -64,19 +62,17 @@
               <img src="../assets/logos/logos-resized/jquery.png" alt="ads" class="float-left bordered"/>
               <img src="../assets/logos/logos-resized/sass.png" alt="ads" class="float-left bordered"/>
             </div>
-            <h4>Bonus Abilities</h4>
+            <h4>Miscellaneous Abilities</h4>
             <ul>
-              <li>Item 1</li>
-              <li>Item 2</li>
-              <li>Item 3</li>
-              <li>Item 4</li>
-              <li>Item 5</li>
+              <% @misc_abilities.each do |ability| %>
+                <li><%= ability.description %></li>
+              <% end %>
             </ul>
           </div>
         </aside>
       </div>
     </main>   
-    </div>
   </div>
+</div>
 
 

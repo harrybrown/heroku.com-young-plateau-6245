@@ -1,4 +1,10 @@
 Career::Application.routes.draw do
+  resources :miscellaneous_abilities
+
+  resources :job_duties
+
+  resources :jobs
+
   resources :service_skills
 
   resources :services

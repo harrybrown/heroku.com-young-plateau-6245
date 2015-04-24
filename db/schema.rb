@@ -11,7 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150415180409) do
+ActiveRecord::Schema.define(version: 20150423030817) do
+
+  create_table "job_duties", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "description"
+    t.integer  "job_id"
+  end
+
+  create_table "jobs", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.string   "company"
+    t.string   "type_of_company"
+    t.string   "position_title"
+    t.string   "logo"
+  end
+
+  create_table "miscellaneous_abilities", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "description"
+  end
 
   create_table "resumes", force: true do |t|
     t.string   "job_type"
@@ -22,11 +46,11 @@ ActiveRecord::Schema.define(version: 20150415180409) do
   end
 
   create_table "service_skills", force: true do |t|
+    t.integer  "service_id"
     t.string   "name"
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "service_id"
   end
 
   create_table "services", force: true do |t|
