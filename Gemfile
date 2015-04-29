@@ -55,4 +55,7 @@ group :development, :test do
   gem 'spring'
 end
 
+  # for database import
+  gem 'taps', '~> 0.3.24'
+
 ruby "2.2.0"
