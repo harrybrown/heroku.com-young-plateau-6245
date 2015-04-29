@@ -11,16 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150423030817) do
+ActiveRecord::Schema.define(version: 20150425023325) do
 
-  create_table "job_duties", force: true do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "job_duties", force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "description"
-    t.integer  "job_id"
+    t.integer  "job_id",      limit: 8
   end
 
-  create_table "jobs", force: true do |t|
+  create_table "jobs", force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.date     "start_date"
@@ -31,13 +34,13 @@ ActiveRecord::Schema.define(version: 20150423030817) do
     t.string   "logo"
   end
 
-  create_table "miscellaneous_abilities", force: true do |t|
+  create_table "miscellaneous_abilities", force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "description"
   end
 
-  create_table "resumes", force: true do |t|
+  create_table "resumes", force: :cascade do |t|
     t.string   "job_type"
     t.string   "objective"
     t.integer  "user_id"
@@ -45,22 +48,28 @@ ActiveRecord::Schema.define(version: 20150423030817) do
     t.datetime "updated_at"
   end
 
-  create_table "service_skills", force: true do |t|
-    t.integer  "service_id"
-    t.string   "name"
-    t.string   "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table "rooms", force: :cascade do |t|
+    t.string   "topic"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table "services", force: true do |t|
-    t.string   "name"
-    t.string   "description"
+  create_table "service_skills", force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
+    t.string   "description"
+    t.integer  "service_id",  limit: 8
   end
 
-  create_table "users", force: true do |t|
+  create_table "services", force: :cascade do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+    t.string   "description"
+  end
+
+  create_table "users", force: :cascade do |t|
     t.string   "first_name"
     t.string   "middle_name"
     t.string   "last_name"
