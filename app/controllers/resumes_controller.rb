@@ -1,10 +1,11 @@
 class ResumesController < ApplicationController
   before_action :set_resume, only: [:show, :edit, :update, :destroy]
+  layout 'resume/'
 
   # GET /resumes
   # GET /resumes.json
   def index
-    @resumes = Resume.all
+    @resume = Resume.find(1)
   end
 
   # GET /resumes/1
