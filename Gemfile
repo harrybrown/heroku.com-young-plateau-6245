@@ -58,4 +58,7 @@ end
   # for database import
   gem 'taps', '~> 0.3.24'
 
-ruby "2.2.0"
+  # to create seed file
+  gem 'seed_dump'
+
+ruby "2.0.0"
