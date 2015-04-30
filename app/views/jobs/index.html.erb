@@ -10,7 +10,7 @@
                 <% @jobs.each do |job| %>
                   <tr>
                     <td>
-                      <h4><img src="../assets/logos/companies/<%= job.logo %>" style="max-height: 24px;" %>&nbsp;<%= job.company %><span class="label float-right"><%= job.start_date.strftime("%B %d, %Y") %>&nbsp;-&nbsp;<%= job.end_date.strftime("%B %d, %Y") %></span></h4>
+                      <h4><img src="../assets/logos/companies/<%= job.logo %>" style="max-height: 24px;" %>&nbsp;<%= job.company %><span class="label float-right"><%= job.start_date.strftime("%B %d, %Y") %>&nbsp;-&nbsp;<%= job.humanized_end_date %></span></h4>
                       <table>
                         <% job.job_duties.each do |duty| %>
                           <tr>

@@ -6,6 +6,11 @@ class ResumesController < ApplicationController
   # GET /resumes.json
   def index
     @resume = Resume.find(1)
+    @miscellaneous_abilities = MiscellaneousAbility.all
+    @services = Service.all
+    @service_skills = ServiceSkill.all
+    @jobs = Job.all
+    @job_duties = JobDuty.all
   end
 
   # GET /resumes/1
