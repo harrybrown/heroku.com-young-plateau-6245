@@ -61,4 +61,7 @@ end
   # to create seed file
   gem 'seed_dump'
 
+  # for pdfs
+  gem 'pdfkit'
+
 ruby "2.0.0"
