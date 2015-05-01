@@ -6,39 +6,11 @@
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
   </head>
-  <body>
+  <body style="background-color: #00ff00;">
 <!--     <video id="bgVideo" controls preload="false" autoplay loop muted>
       <source src="../assets/the_sun.mp4" type="video/mp4" > 
     </video> -->
-    <ul class="ym-skiplinks">
-      <li><a class="ym-skip" href="#nav">Skip to navigation (Press Enter)</a></li>
-      <li><a class="ym-skip" href="#main">Skip to main content (Press Enter)</a></li>
-    </ul>
-    <nav id="nav">
-      <div class="ym-wrapper" >
-        <div class="ym-hlist">
-          <ul>
-            <li><%= link_to "Home", "/" %></li>
-            <li><%= link_to "About", about_index_path %></li>
-            <li><%= link_to "Skills", service_skills_path %></li>
-            <li><%= link_to "Jobs", jobs_path %></li>
-            <li><%= link_to "Resume", resumes_path(:format => "pdf") %></li>
-            <li><%= link_to "Contact", contacts_path %></li>
-          </ul>
-
-
-          <h1 style="line-height: 30px; margin: 0; color: #fff;">
-            <span style="font-size: 30px;">
-              <img src="../assets/rex-eye.png" style="max-height: 30px;"/>
-              T-Rex&nbsp;Designs
-            </span>
-            <span style="font-size: 12px; font-weight: normal; font-family: 'Ubuntu', Georgia, 'Times New Roman', Times, serif;">&nbsp;-&nbsp;Ruby&nbsp;on&nbsp;Rails&nbsp;Developer&nbsp;(Chicago)
-            </span>
-          </h1>
-        </div>
-      </div>
-    </nav>
-
+    
     <%= yield %>
 
    
