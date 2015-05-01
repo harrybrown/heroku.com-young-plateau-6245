@@ -64,4 +64,6 @@ end
   # for pdfs
   gem 'pdfkit'
 
+  gem 'wkhtmltopdf', '~> 0.1.2'
+
 ruby "2.0.0"
