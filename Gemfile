@@ -64,6 +64,8 @@ end
   # for pdfs
   gem 'pdfkit'
 
-  gem 'wkhtmltopdf', '~> 0.1.2'
+  gem "wkhtmltopdf-heroku", "1.0.0"
+  gem "wkhtmltopdf-binary", "0.9.5.3"  
 
+  
 ruby "2.0.0"
