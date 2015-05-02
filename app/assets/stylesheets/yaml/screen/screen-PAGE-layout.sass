@@ -14,6 +14,9 @@
   body
     overflow-y: scroll
     overflow-x: hidden
+    background-color: #ffffff
+    background-image: url("/assets/global/tile.png")
+
   /* Layout Module Configuration & fallback for unsupported media queries
   .ym-wrapper
     min-width: 760px
@@ -23,7 +26,7 @@
     padding: 10px
   /* Basic Element Styling
   header
-    background: $darkest_shade
+    background-color: $darkest_shade
     color: $lightest_shade
     padding: 1.5em
     h1, h3, h5
@@ -35,14 +38,18 @@
   nav
     background: $primary_color
     background: url("/assets/grain.png") 50% 50%, -moz-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 80%), $primary_color
-    background: url("/images/global/grain.png") 50% 50%, -webkit-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 80%), $primary_color
+    background: url("/assets/grain.png") 50% 50%, -webkit-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 80%), $primary_color
+    width: 100% !important
+    margin: 0 !important
+    padding: 0 !important
   main
     padding: 1.5em 0 0 0
   footer
     min-height: 500px
     width: 100%
     margin: 0
-    background: $darker_shade
+    background-color: $darker_shade
+    background-image: url("/assets/global/tile.png")
     color: $lightest_shade
     padding: 1.5em
     p, a, h1, h2, h3, h4, h5, h6
