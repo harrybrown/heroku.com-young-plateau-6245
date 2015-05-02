@@ -67,5 +67,6 @@ end
   gem "wkhtmltopdf-heroku", "1.0.0"
   gem "wkhtmltopdf-binary", "0.9.5.3"  
 
+  gem 'highcharts-rails', '~> 4.1.4'
   
 ruby "2.0.0"

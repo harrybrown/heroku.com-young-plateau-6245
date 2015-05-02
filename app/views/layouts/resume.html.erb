@@ -2,6 +2,35 @@
 <html>
 <head>
   <title>H. Leroy Brown Resume - Ruby on Rails Developer</title>
+      <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+
+<script>
+$(function () { 
+    $('#container').highcharts({
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'Fruit Consumption'
+        },
+        xAxis: {
+            categories: ['Apples', 'Bananas', 'Oranges']
+        },
+        yAxis: {
+            title: {
+                text: 'Fruit eaten'
+            }
+        },
+        series: [{
+            name: 'Jane',
+            data: [1, 0, 4]
+        }, {
+            name: 'John',
+            data: [5, 7, 3]
+        }]
+    });
+});
+</script>
 </head>
 <body>
 

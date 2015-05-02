@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150425023325) do
+ActiveRecord::Schema.define(version: 20150502183052) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,7 +59,8 @@ ActiveRecord::Schema.define(version: 20150425023325) do
     t.datetime "updated_at"
     t.string   "name"
     t.string   "description"
-    t.integer  "service_id",  limit: 8
+    t.integer  "service_id",     limit: 8
+    t.integer  "my_skill_level", limit: 8
   end
 
   create_table "services", force: :cascade do |t|
