@@ -69,7 +69,5 @@ end
 
   gem 'highcharts-rails', '~> 4.1.4'
 
-  gem 'pry'
-  gem 'pry-debugger'
   
 ruby "2.0.0"
