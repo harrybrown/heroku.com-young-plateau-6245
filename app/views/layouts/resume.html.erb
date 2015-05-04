@@ -3,10 +3,17 @@
 <head>
   <title>H. Leroy Brown Resume - Ruby on Rails Developer</title>
       <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-<% labels = (ServiceSkill.where(service_id: 1).to_a).map{|level| level[:name]} %>
+
+</head>
+<body>
+    <% @services.each do |service| %>
+<% service.service_skills.each do |skill| %>
+
+
+<% labels = (ServiceSkill.where(service_id: service.id).to_a).map{|level| level[:name]} %>
 <script>
 $(function () { 
-    $('#container').highcharts({
+    $('#container<%= service.id %>').highcharts({
         credits: {
             enabled: false
         },
@@ -14,27 +21,30 @@ $(function () {
             type: 'bar'
         },
         title: {
-            text: 'Fruit Consumption'
+            text: '<%= service.name %>'
         },
         xAxis: {
             categories: <%=  json_escape labels.to_json.html_safe %>    
 
         },
         yAxis: {
+            max: 10,
             title: {
-                text: 'Fruit eaten'
+                text: 'MY SKILL LEVEL (4 is Average BUT 8 is Great)'
             }
         },
         series: [{
-            name: 'Jane',
-            data: <%= (ServiceSkill.where(service_id: 1).to_a).map{|level| level[:my_skill_level]} %>
+            showInLegend: false,        
+            data: <%= (ServiceSkill.where(service_id: service.id).to_a).map{|level| level[:my_skill_level]} %>
             
         }]
     });
 });
 </script>
-</head>
-<body>
+<% end %>
+<div id="container<%= service.id %>" style="width:300px; height:300px; display: inline-block;"></div>
+
+ <% end %>
 <%= yield %>
 
 </body>
