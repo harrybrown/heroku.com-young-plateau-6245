@@ -70,6 +70,6 @@ class ServiceSkillsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def service_skill_params
-    params.require(:service_skill).permit(:name, :my_skill_level)
+    params.require(:service_skill).permit(:name, :my_skill_level, :service_id)
     end
 end

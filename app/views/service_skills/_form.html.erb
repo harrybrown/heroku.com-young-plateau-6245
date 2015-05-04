@@ -10,8 +10,11 @@
       </ul>
     </div>
   <% end %>
-<%= f.text_field  :name %>
-<%= f.number_field :my_skill_level  %>
+service_id: <%= f.number_field :service_id  %>
+name: <%= f.text_field  :name %>
+skill level: <%= f.number_field :my_skill_level  %>
+description: <%= f.text_field  :description %>
+
   <div class="actions">
     <%= f.submit %>
   </div>

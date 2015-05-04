@@ -15,7 +15,7 @@
                         <% service.service_skills.each do |skill| %>
                           <tr>
                             <td>
-                              <h6><%= skill.name %></h6>
+                              <h6><%= link_to(skill.name, edit_service_skill_path(skill)) %></h6>
                             </td>
                             <td>
                               <%= skill.description %>
